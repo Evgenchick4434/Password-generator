@@ -14,6 +14,10 @@ def create_new(length: int, characters: str) -> str:
     return ''.join(secrets.choice(characters) for _ in range(length))
 
 
+
 def get_entropy(length: int, character_number: int) -> float:
-    entropy = length * log2(character_number)
-    return round(entropy, 2)
+    try:
+        entropy = length * log2(character_number)
+        return round(entropy, 2)
+    except ValueError:
+        return 0.0

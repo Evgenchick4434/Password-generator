@@ -125,6 +125,7 @@ class Ui_MainWindow(object):
         self.btn_visibility.setIcon(icon2)
         self.btn_visibility.setIconSize(QSize(30, 30))
         self.btn_visibility.setCheckable(True)
+        self.btn_visibility.setChecked(True)
 
         self.horizontalLayout_2.addWidget(self.btn_visibility)
 
@@ -142,6 +143,9 @@ class Ui_MainWindow(object):
         icon3.addFile(u":/icons/icons/refresh.svg", QSize(), QIcon.Normal, QIcon.On)
         self.btn_refresh.setIcon(icon3)
         self.btn_refresh.setIconSize(QSize(52, 52))
+#if QT_CONFIG(shortcut)
+        self.btn_refresh.setShortcut(u"Ctrl+R")
+#endif // QT_CONFIG(shortcut)
 
         self.layout_password.addWidget(self.btn_refresh)
 
@@ -291,6 +295,9 @@ class Ui_MainWindow(object):
         self.btn_visibility.setText("")
         self.btn_refresh.setText("")
         self.btn_copy.setText("")
+#if QT_CONFIG(shortcut)
+        self.btn_copy.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+C", None))
+#endif // QT_CONFIG(shortcut)
         self.label_strength.setText("")
         self.label_entropy.setText("")
         self.btn_lower.setText(QCoreApplication.translate("MainWindow", u"a-z", None))

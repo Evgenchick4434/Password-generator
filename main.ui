@@ -150,6 +150,9 @@ Qframe:hover {
            <property name="checkable">
             <bool>true</bool>
            </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
         </layout>
@@ -180,6 +183,9 @@ Qframe:hover {
           <height>52</height>
          </size>
         </property>
+        <property name="shortcut">
+         <string notr="true">Ctrl+R</string>
+        </property>
        </widget>
       </item>
       <item>
@@ -206,6 +212,9 @@ Qframe:hover {
           <width>42</width>
           <height>42</height>
          </size>
+        </property>
+        <property name="shortcut">
+         <string>Ctrl+C</string>
         </property>
        </widget>
       </item>

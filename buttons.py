@@ -14,3 +14,7 @@ CHARACTER_NUMBER = {
     'btn_digits': len(Characters.btn_digits.value),
     'btn_special': len(Characters.btn_special.value),
 }
+
+GENERATE_PASSWORD = {
+    'btn_refresh', 'btn_lower', 'btn_upper', 'btn_digits', 'btn_special'
+}
